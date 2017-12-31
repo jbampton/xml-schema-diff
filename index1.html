@@ -1,0 +1,3107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>XML Schema Differencing Dashboard</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+    <style>
+      .container-fluid { padding: 0px; }
+      .navbar, .navbar-default { padding: 5pt; background-color: rgba(49,37,152,0.8) !important; font-size: 12pt; }
+      .navbar, .navbar-default li a { color: #000 !important; }
+      .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover { color: #fff; font-size: 15pt; }
+      div[id^="chart_div"] > div > div { margin: auto; }
+      footer { background-color: rgba(49,37,152,0.8); min-height: 200px; color: #fff !important; }
+      footer ul a { color: #fff !important; }
+      .selected { background-color: aliceblue; font-weight: bold; }
+      .navbar-default li:hover a { background-color: red !important; }
+      .nuchecker a { font-weight: bold; }
+      h2 { text-align: center; background-color: rgba(49,37,152,0.8); padding: 14px; color: #fff; }
+    </style>
+  </head>
+  <body>
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" id="head1">XML Schema Differencing Dashboard</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Page 1</a></li>
+            <li><a href="index1.html">Page 2</a></li>
+            <li><a href="index2.html">Page 3</a></li>
+            <li><a href="index3.html">Page 4</a></li>
+            <li><a href="index4.html">Page 5</a></li>
+            <li><a href="index5.html">Page 6</a></li>
+            <li><a href="index6.html">Page 7</a></li>
+            <li><a href="index7.html">Page 8</a></li>
+            <li><a href="index8.html">Page 9</a></li>
+            <li><a href="index9.html">Page 10</a></li>
+            <li><a href="index10.html">Page 11</a></li>
+            <li><a href="index11.html">Page 12</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <h2>51. Branch count of schema by xs:attribute name="URI"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameURI1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameURI2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameURI3"></div>
+        </div>
+      <h2>52. Branch count of schema by xs:attribute name="Value"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameValue1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameValue2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameValue3"></div>
+        </div>
+      <h2>53. Branch count of schema by xs:attribute name="Version"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameVersion1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameVersion2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameVersion3"></div>
+        </div>
+      <h2>54. Branch count of schema by xs:attributeGroup</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributeGroup1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributeGroup2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributeGroup3"></div>
+        </div>
+      <h2>55. Branch count of schema by xs:attributeGroup name="IDNameQualifiers"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributeGroupnameIDNameQualifiers1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributeGroupnameIDNameQualifiers2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributeGroupnameIDNameQualifiers3"></div>
+        </div>
+      <h2>56. Branch count of schema by xs:choice</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xschoice1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xschoice2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xschoice3"></div>
+        </div>
+      <h2>57. Branch count of schema by xs:choice maxOccurs="unbounded"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xschoicemaxOccursunbounded1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xschoicemaxOccursunbounded2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xschoicemaxOccursunbounded3"></div>
+        </div>
+      <h2>58. Branch count of schema by xs:choice minOccurs="0"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xschoiceminOccurs01"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xschoiceminOccurs02"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xschoiceminOccurs03"></div>
+        </div>
+      <h2>59. Branch count of schema by xs:complexContent</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexContent1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexContent2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexContent3"></div>
+        </div>
+      <h2>60. Branch count of schema by xs:complexType</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexType3"></div>
+        </div>
+      <h2>61. Branch count of schema by xs:complexType name="ActionType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameActionType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameActionType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameActionType3"></div>
+        </div>
+      <h2>62. Branch count of schema by xs:complexType name="AdviceType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAdviceType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAdviceType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAdviceType3"></div>
+        </div>
+      <h2>63. Branch count of schema by xs:complexType name="AgreementMethodType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAgreementMethodType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAgreementMethodType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAgreementMethodType3"></div>
+        </div>
+      <h2>64. Branch count of schema by xs:complexType name="ArtifactResolveType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameArtifactResolveType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameArtifactResolveType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameArtifactResolveType3"></div>
+        </div>
+      <h2>65. Branch count of schema by xs:complexType name="ArtifactResponseType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameArtifactResponseType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameArtifactResponseType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameArtifactResponseType3"></div>
+        </div>
+      <h2>66. Branch count of schema by xs:complexType name="AssertionIDRequestType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAssertionIDRequestType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAssertionIDRequestType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAssertionIDRequestType3"></div>
+        </div>
+      <h2>67. Branch count of schema by xs:complexType name="AssertionType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAssertionType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAssertionType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAssertionType3"></div>
+        </div>
+      <h2>68. Branch count of schema by xs:complexType name="AttributeQueryType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAttributeQueryType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAttributeQueryType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAttributeQueryType3"></div>
+        </div>
+      <h2>69. Branch count of schema by xs:complexType name="AttributeStatementType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAttributeStatementType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAttributeStatementType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAttributeStatementType3"></div>
+        </div>
+      <h2>70. Branch count of schema by xs:complexType name="AttributeType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAttributeType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAttributeType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAttributeType3"></div>
+        </div>
+      <h2>71. Branch count of schema by xs:complexType name="AudienceRestrictionType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAudienceRestrictionType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAudienceRestrictionType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAudienceRestrictionType3"></div>
+        </div>
+      <h2>72. Branch count of schema by xs:complexType name="AuthnContextType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthnContextType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthnContextType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthnContextType3"></div>
+        </div>
+      <h2>73. Branch count of schema by xs:complexType name="AuthnQueryType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthnQueryType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthnQueryType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthnQueryType3"></div>
+        </div>
+      <h2>74. Branch count of schema by xs:complexType name="AuthnRequestType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthnRequestType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthnRequestType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthnRequestType3"></div>
+        </div>
+      <h2>75. Branch count of schema by xs:complexType name="AuthnStatementType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthnStatementType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthnStatementType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthnStatementType3"></div>
+        </div>
+      <h2>76. Branch count of schema by xs:complexType name="AuthzDecisionQueryType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthzDecisionQueryType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthzDecisionQueryType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthzDecisionQueryType3"></div>
+        </div>
+      <h2>77. Branch count of schema by xs:complexType name="AuthzDecisionStatementType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthzDecisionStatementType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthzDecisionStatementType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameAuthzDecisionStatementType3"></div>
+        </div>
+      <h2>78. Branch count of schema by xs:complexType name="BaseIDAbstractType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameBaseIDAbstractType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameBaseIDAbstractType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameBaseIDAbstractType3"></div>
+        </div>
+      <h2>79. Branch count of schema by xs:complexType name="CanonicalizationMethodType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameCanonicalizationMethodType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameCanonicalizationMethodType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameCanonicalizationMethodType3"></div>
+        </div>
+      <h2>80. Branch count of schema by xs:complexType name="ConditionAbstractType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameConditionAbstractType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameConditionAbstractType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameConditionAbstractType3"></div>
+        </div>
+      <h2>81. Branch count of schema by xs:complexType name="ConditionsType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameConditionsType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameConditionsType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameConditionsType3"></div>
+        </div>
+      <h2>82. Branch count of schema by xs:complexType name="DSAKeyValueType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameDSAKeyValueType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameDSAKeyValueType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameDSAKeyValueType3"></div>
+        </div>
+      <h2>83. Branch count of schema by xs:complexType name="DigestMethodType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameDigestMethodType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameDigestMethodType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameDigestMethodType3"></div>
+        </div>
+      <h2>84. Branch count of schema by xs:complexType name="EncryptedElementType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameEncryptedElementType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameEncryptedElementType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameEncryptedElementType3"></div>
+        </div>
+      <h2>85. Branch count of schema by xs:complexType name="EvidenceType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameEvidenceType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameEvidenceType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameEvidenceType3"></div>
+        </div>
+      <h2>86. Branch count of schema by xs:complexType name="ExtensionsType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameExtensionsType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameExtensionsType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameExtensionsType3"></div>
+        </div>
+      <h2>87. Branch count of schema by xs:complexType name="IDPEntryType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameIDPEntryType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameIDPEntryType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameIDPEntryType3"></div>
+        </div>
+      <h2>88. Branch count of schema by xs:complexType name="IDPListType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameIDPListType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameIDPListType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameIDPListType3"></div>
+        </div>
+      <h2>89. Branch count of schema by xs:complexType name="KeyInfoConfirmationDataType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameKeyInfoConfirmationDataType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameKeyInfoConfirmationDataType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameKeyInfoConfirmationDataType3"></div>
+        </div>
+      <h2>90. Branch count of schema by xs:complexType name="KeyInfoType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameKeyInfoType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameKeyInfoType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameKeyInfoType3"></div>
+        </div>
+      <h2>91. Branch count of schema by xs:complexType name="KeyValueType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameKeyValueType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameKeyValueType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameKeyValueType3"></div>
+        </div>
+      <h2>92. Branch count of schema by xs:complexType name="LogoutRequestType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameLogoutRequestType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameLogoutRequestType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameLogoutRequestType3"></div>
+        </div>
+      <h2>93. Branch count of schema by xs:complexType name="ManageNameIDRequestType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameManageNameIDRequestType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameManageNameIDRequestType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameManageNameIDRequestType3"></div>
+        </div>
+      <h2>94. Branch count of schema by xs:complexType name="ManifestType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameManifestType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameManifestType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameManifestType3"></div>
+        </div>
+      <h2>95. Branch count of schema by xs:complexType name="NameIDMappingRequestType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameNameIDMappingRequestType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameNameIDMappingRequestType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameNameIDMappingRequestType3"></div>
+        </div>
+      <h2>96. Branch count of schema by xs:complexType name="NameIDMappingResponseType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameNameIDMappingResponseType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameNameIDMappingResponseType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameNameIDMappingResponseType3"></div>
+        </div>
+      <h2>97. Branch count of schema by xs:complexType name="NameIDPolicyType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameNameIDPolicyType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameNameIDPolicyType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameNameIDPolicyType3"></div>
+        </div>
+      <h2>98. Branch count of schema by xs:complexType name="NameIDType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameNameIDType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameNameIDType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameNameIDType3"></div>
+        </div>
+      <h2>99. Branch count of schema by xs:complexType name="ObjectType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameObjectType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameObjectType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameObjectType3"></div>
+        </div>
+      <h2>100. Branch count of schema by xs:complexType name="OneTimeUseType"</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameOneTimeUseType1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameOneTimeUseType2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xscomplexTypenameOneTimeUseType3"></div>
+        </div>
+    </div>
+    <footer>
+      <div class="container">
+        <ul class="list-unstyled">
+            <li><a href="#head1">Back to top</a></li>
+            <li><a href="index.html">Page 1</a></li>
+            <li><a href="index1.html">Page 2</a></li>
+            <li><a href="index2.html">Page 3</a></li>
+            <li><a href="index3.html">Page 4</a></li>
+            <li><a href="index4.html">Page 5</a></li>
+            <li><a href="index5.html">Page 6</a></li>
+            <li><a href="index6.html">Page 7</a></li>
+            <li><a href="index7.html">Page 8</a></li>
+            <li><a href="index8.html">Page 9</a></li>
+            <li><a href="index9.html">Page 10</a></li>
+            <li><a href="index10.html">Page 11</a></li>
+            <li><a href="index11.html">Page 12</a></li>
+            <li class="nuchecker"><a target="_blank" rel="noopener">Valid HTML</a>
+        </ul>
+      </div>
+    </footer>
+    <!--Load the AJAX API-->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://www.google.com/jsapi"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      // Load the Visualization API and the corechart package.
+      google.charts.load("current", {"packages":["corechart"]});
+        google.charts.setOnLoadCallback(drawChartxsattributenameURI1);
+
+        function drawChartxsattributenameURI1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:attribute name=\"URI\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 2], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "151 - Branch data1 count of: <xs:attribute name=\"URI\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xsattributenameURI1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxsattributenameURI2);
+
+        function drawChartxsattributenameURI2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:attribute name=\"URI\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 2], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "152 - Branch gh-pages count of: <xs:attribute name=\"URI\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xsattributenameURI2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxsattributenameURI3);
+
+        function drawChartxsattributenameURI3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:attribute name=\"URI\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "153 - Branch master count of: <xs:attribute name=\"URI\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xsattributenameURI3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxsattributenameValue1);
+
+        function drawChartxsattributenameValue1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:attribute name=\"Value\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "154 - Branch data1 count of: <xs:attribute name=\"Value\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xsattributenameValue1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxsattributenameValue2);
+
+        function drawChartxsattributenameValue2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:attribute name=\"Value\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "155 - Branch gh-pages count of: <xs:attribute name=\"Value\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xsattributenameValue2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxsattributenameValue3);
+
+        function drawChartxsattributenameValue3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:attribute name=\"Value\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "156 - Branch master count of: <xs:attribute name=\"Value\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xsattributenameValue3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxsattributenameVersion1);
+
+        function drawChartxsattributenameVersion1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:attribute name=\"Version\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 2], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "157 - Branch data1 count of: <xs:attribute name=\"Version\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xsattributenameVersion1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxsattributenameVersion2);
+
+        function drawChartxsattributenameVersion2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:attribute name=\"Version\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 2], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "158 - Branch gh-pages count of: <xs:attribute name=\"Version\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xsattributenameVersion2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxsattributenameVersion3);
+
+        function drawChartxsattributenameVersion3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:attribute name=\"Version\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "159 - Branch master count of: <xs:attribute name=\"Version\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xsattributenameVersion3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxsattributeGroup1);
+
+        function drawChartxsattributeGroup1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:attributeGroup");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 3]]);
+          // Set chart options
+          var options = {"title": "160 - Branch data1 count of: <xs:attributeGroup grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xsattributeGroup1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxsattributeGroup2);
+
+        function drawChartxsattributeGroup2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:attributeGroup");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 3]]);
+          // Set chart options
+          var options = {"title": "161 - Branch gh-pages count of: <xs:attributeGroup grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xsattributeGroup2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxsattributeGroup3);
+
+        function drawChartxsattributeGroup3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:attributeGroup");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "162 - Branch master count of: <xs:attributeGroup grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xsattributeGroup3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxsattributeGroupnameIDNameQualifiers1);
+
+        function drawChartxsattributeGroupnameIDNameQualifiers1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:attributeGroup name=\"IDNameQualifiers\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "163 - Branch data1 count of: <xs:attributeGroup name=\"IDNameQualifiers\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xsattributeGroupnameIDNameQualifiers1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxsattributeGroupnameIDNameQualifiers2);
+
+        function drawChartxsattributeGroupnameIDNameQualifiers2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:attributeGroup name=\"IDNameQualifiers\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "164 - Branch gh-pages count of: <xs:attributeGroup name=\"IDNameQualifiers\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xsattributeGroupnameIDNameQualifiers2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxsattributeGroupnameIDNameQualifiers3);
+
+        function drawChartxsattributeGroupnameIDNameQualifiers3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:attributeGroup name=\"IDNameQualifiers\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "165 - Branch master count of: <xs:attributeGroup name=\"IDNameQualifiers\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xsattributeGroupnameIDNameQualifiers3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxschoice1);
+
+        function drawChartxschoice1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:choice");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 6], ["saml20protocol_schema.xsd", 7], ["xenc_schema.xsd", 4], ["saml20assertion_schema.xsd", 11]]);
+          // Set chart options
+          var options = {"title": "166 - Branch data1 count of: <xs:choice grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xschoice1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxschoice2);
+
+        function drawChartxschoice2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:choice");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 6], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 7], ["xenc_schema.xsd", 4], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 11]]);
+          // Set chart options
+          var options = {"title": "167 - Branch gh-pages count of: <xs:choice grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xschoice2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxschoice3);
+
+        function drawChartxschoice3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:choice");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "168 - Branch master count of: <xs:choice grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xschoice3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxschoicemaxOccursunbounded1);
+
+        function drawChartxschoicemaxOccursunbounded1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:choice maxOccurs=\"unbounded\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 2], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 2]]);
+          // Set chart options
+          var options = {"title": "169 - Branch data1 count of: <xs:choice maxOccurs=\"unbounded\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xschoicemaxOccursunbounded1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxschoicemaxOccursunbounded2);
+
+        function drawChartxschoicemaxOccursunbounded2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:choice maxOccurs=\"unbounded\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 2], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 2]]);
+          // Set chart options
+          var options = {"title": "170 - Branch gh-pages count of: <xs:choice maxOccurs=\"unbounded\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xschoicemaxOccursunbounded2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxschoicemaxOccursunbounded3);
+
+        function drawChartxschoicemaxOccursunbounded3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:choice maxOccurs=\"unbounded\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "171 - Branch master count of: <xs:choice maxOccurs=\"unbounded\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xschoicemaxOccursunbounded3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxschoiceminOccurs01);
+
+        function drawChartxschoiceminOccurs01() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:choice minOccurs=\"0\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 1], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 5]]);
+          // Set chart options
+          var options = {"title": "172 - Branch data1 count of: <xs:choice minOccurs=\"0\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xschoiceminOccurs01"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxschoiceminOccurs02);
+
+        function drawChartxschoiceminOccurs02() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:choice minOccurs=\"0\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 1], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 5]]);
+          // Set chart options
+          var options = {"title": "173 - Branch gh-pages count of: <xs:choice minOccurs=\"0\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xschoiceminOccurs02"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxschoiceminOccurs03);
+
+        function drawChartxschoiceminOccurs03() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:choice minOccurs=\"0\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "174 - Branch master count of: <xs:choice minOccurs=\"0\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xschoiceminOccurs03"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexContent1);
+
+        function drawChartxscomplexContent1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexContent");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 13], ["xenc_schema.xsd", 2], ["saml20assertion_schema.xsd", 8]]);
+          // Set chart options
+          var options = {"title": "175 - Branch data1 count of: <xs:complexContent grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexContent1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexContent2);
+
+        function drawChartxscomplexContent2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexContent");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 13], ["xenc_schema.xsd", 2], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 8]]);
+          // Set chart options
+          var options = {"title": "176 - Branch gh-pages count of: <xs:complexContent grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexContent2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexContent3);
+
+        function drawChartxscomplexContent3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexContent");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "177 - Branch master count of: <xs:complexContent grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexContent3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexType1);
+
+        function drawChartxscomplexType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 22], ["saml20protocol_schema.xsd", 25], ["xenc_schema.xsd", 12], ["saml20assertion_schema.xsd", 23]]);
+          // Set chart options
+          var options = {"title": "178 - Branch data1 count of: <xs:complexType grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexType2);
+
+        function drawChartxscomplexType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 22], ["dinner-menu.xsd", 2], ["bookstore.xsd", 3], ["note.xsd", 1], ["saml20protocol_schema.xsd", 25], ["xenc_schema.xsd", 12], ["note2.xsd", 2], ["saml20assertion_schema.xsd", 23]]);
+          // Set chart options
+          var options = {"title": "179 - Branch gh-pages count of: <xs:complexType grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexType3);
+
+        function drawChartxscomplexType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 2], ["bookstore.xsd", 3], ["note.xsd", 1], ["note2.xsd", 2]]);
+          // Set chart options
+          var options = {"title": "180 - Branch master count of: <xs:complexType grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameActionType1);
+
+        function drawChartxscomplexTypenameActionType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ActionType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "181 - Branch data1 count of: <xs:complexType name=\"ActionType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameActionType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameActionType2);
+
+        function drawChartxscomplexTypenameActionType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ActionType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "182 - Branch gh-pages count of: <xs:complexType name=\"ActionType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameActionType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameActionType3);
+
+        function drawChartxscomplexTypenameActionType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ActionType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "183 - Branch master count of: <xs:complexType name=\"ActionType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameActionType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAdviceType1);
+
+        function drawChartxscomplexTypenameAdviceType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AdviceType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "184 - Branch data1 count of: <xs:complexType name=\"AdviceType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAdviceType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAdviceType2);
+
+        function drawChartxscomplexTypenameAdviceType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AdviceType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "185 - Branch gh-pages count of: <xs:complexType name=\"AdviceType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAdviceType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAdviceType3);
+
+        function drawChartxscomplexTypenameAdviceType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AdviceType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "186 - Branch master count of: <xs:complexType name=\"AdviceType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAdviceType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAgreementMethodType1);
+
+        function drawChartxscomplexTypenameAgreementMethodType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AgreementMethodType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 1], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "187 - Branch data1 count of: <xs:complexType name=\"AgreementMethodType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAgreementMethodType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAgreementMethodType2);
+
+        function drawChartxscomplexTypenameAgreementMethodType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AgreementMethodType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 1], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "188 - Branch gh-pages count of: <xs:complexType name=\"AgreementMethodType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAgreementMethodType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAgreementMethodType3);
+
+        function drawChartxscomplexTypenameAgreementMethodType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AgreementMethodType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "189 - Branch master count of: <xs:complexType name=\"AgreementMethodType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAgreementMethodType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameArtifactResolveType1);
+
+        function drawChartxscomplexTypenameArtifactResolveType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ArtifactResolveType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "190 - Branch data1 count of: <xs:complexType name=\"ArtifactResolveType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameArtifactResolveType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameArtifactResolveType2);
+
+        function drawChartxscomplexTypenameArtifactResolveType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ArtifactResolveType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "191 - Branch gh-pages count of: <xs:complexType name=\"ArtifactResolveType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameArtifactResolveType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameArtifactResolveType3);
+
+        function drawChartxscomplexTypenameArtifactResolveType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ArtifactResolveType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "192 - Branch master count of: <xs:complexType name=\"ArtifactResolveType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameArtifactResolveType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameArtifactResponseType1);
+
+        function drawChartxscomplexTypenameArtifactResponseType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ArtifactResponseType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "193 - Branch data1 count of: <xs:complexType name=\"ArtifactResponseType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameArtifactResponseType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameArtifactResponseType2);
+
+        function drawChartxscomplexTypenameArtifactResponseType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ArtifactResponseType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "194 - Branch gh-pages count of: <xs:complexType name=\"ArtifactResponseType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameArtifactResponseType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameArtifactResponseType3);
+
+        function drawChartxscomplexTypenameArtifactResponseType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ArtifactResponseType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "195 - Branch master count of: <xs:complexType name=\"ArtifactResponseType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameArtifactResponseType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAssertionIDRequestType1);
+
+        function drawChartxscomplexTypenameAssertionIDRequestType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AssertionIDRequestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "196 - Branch data1 count of: <xs:complexType name=\"AssertionIDRequestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAssertionIDRequestType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAssertionIDRequestType2);
+
+        function drawChartxscomplexTypenameAssertionIDRequestType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AssertionIDRequestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "197 - Branch gh-pages count of: <xs:complexType name=\"AssertionIDRequestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAssertionIDRequestType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAssertionIDRequestType3);
+
+        function drawChartxscomplexTypenameAssertionIDRequestType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AssertionIDRequestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "198 - Branch master count of: <xs:complexType name=\"AssertionIDRequestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAssertionIDRequestType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAssertionType1);
+
+        function drawChartxscomplexTypenameAssertionType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AssertionType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "199 - Branch data1 count of: <xs:complexType name=\"AssertionType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAssertionType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAssertionType2);
+
+        function drawChartxscomplexTypenameAssertionType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AssertionType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "200 - Branch gh-pages count of: <xs:complexType name=\"AssertionType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAssertionType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAssertionType3);
+
+        function drawChartxscomplexTypenameAssertionType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AssertionType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "201 - Branch master count of: <xs:complexType name=\"AssertionType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAssertionType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAttributeQueryType1);
+
+        function drawChartxscomplexTypenameAttributeQueryType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AttributeQueryType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "202 - Branch data1 count of: <xs:complexType name=\"AttributeQueryType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAttributeQueryType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAttributeQueryType2);
+
+        function drawChartxscomplexTypenameAttributeQueryType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AttributeQueryType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "203 - Branch gh-pages count of: <xs:complexType name=\"AttributeQueryType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAttributeQueryType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAttributeQueryType3);
+
+        function drawChartxscomplexTypenameAttributeQueryType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AttributeQueryType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "204 - Branch master count of: <xs:complexType name=\"AttributeQueryType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAttributeQueryType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAttributeStatementType1);
+
+        function drawChartxscomplexTypenameAttributeStatementType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AttributeStatementType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "205 - Branch data1 count of: <xs:complexType name=\"AttributeStatementType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAttributeStatementType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAttributeStatementType2);
+
+        function drawChartxscomplexTypenameAttributeStatementType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AttributeStatementType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "206 - Branch gh-pages count of: <xs:complexType name=\"AttributeStatementType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAttributeStatementType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAttributeStatementType3);
+
+        function drawChartxscomplexTypenameAttributeStatementType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AttributeStatementType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "207 - Branch master count of: <xs:complexType name=\"AttributeStatementType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAttributeStatementType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAttributeType1);
+
+        function drawChartxscomplexTypenameAttributeType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AttributeType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "208 - Branch data1 count of: <xs:complexType name=\"AttributeType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAttributeType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAttributeType2);
+
+        function drawChartxscomplexTypenameAttributeType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AttributeType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "209 - Branch gh-pages count of: <xs:complexType name=\"AttributeType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAttributeType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAttributeType3);
+
+        function drawChartxscomplexTypenameAttributeType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AttributeType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "210 - Branch master count of: <xs:complexType name=\"AttributeType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAttributeType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAudienceRestrictionType1);
+
+        function drawChartxscomplexTypenameAudienceRestrictionType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AudienceRestrictionType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "211 - Branch data1 count of: <xs:complexType name=\"AudienceRestrictionType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAudienceRestrictionType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAudienceRestrictionType2);
+
+        function drawChartxscomplexTypenameAudienceRestrictionType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AudienceRestrictionType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "212 - Branch gh-pages count of: <xs:complexType name=\"AudienceRestrictionType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAudienceRestrictionType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAudienceRestrictionType3);
+
+        function drawChartxscomplexTypenameAudienceRestrictionType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AudienceRestrictionType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "213 - Branch master count of: <xs:complexType name=\"AudienceRestrictionType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAudienceRestrictionType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthnContextType1);
+
+        function drawChartxscomplexTypenameAuthnContextType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthnContextType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "214 - Branch data1 count of: <xs:complexType name=\"AuthnContextType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthnContextType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthnContextType2);
+
+        function drawChartxscomplexTypenameAuthnContextType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthnContextType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "215 - Branch gh-pages count of: <xs:complexType name=\"AuthnContextType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthnContextType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthnContextType3);
+
+        function drawChartxscomplexTypenameAuthnContextType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthnContextType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "216 - Branch master count of: <xs:complexType name=\"AuthnContextType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthnContextType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthnQueryType1);
+
+        function drawChartxscomplexTypenameAuthnQueryType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthnQueryType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "217 - Branch data1 count of: <xs:complexType name=\"AuthnQueryType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthnQueryType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthnQueryType2);
+
+        function drawChartxscomplexTypenameAuthnQueryType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthnQueryType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "218 - Branch gh-pages count of: <xs:complexType name=\"AuthnQueryType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthnQueryType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthnQueryType3);
+
+        function drawChartxscomplexTypenameAuthnQueryType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthnQueryType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "219 - Branch master count of: <xs:complexType name=\"AuthnQueryType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthnQueryType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthnRequestType1);
+
+        function drawChartxscomplexTypenameAuthnRequestType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthnRequestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "220 - Branch data1 count of: <xs:complexType name=\"AuthnRequestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthnRequestType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthnRequestType2);
+
+        function drawChartxscomplexTypenameAuthnRequestType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthnRequestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "221 - Branch gh-pages count of: <xs:complexType name=\"AuthnRequestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthnRequestType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthnRequestType3);
+
+        function drawChartxscomplexTypenameAuthnRequestType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthnRequestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "222 - Branch master count of: <xs:complexType name=\"AuthnRequestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthnRequestType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthnStatementType1);
+
+        function drawChartxscomplexTypenameAuthnStatementType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthnStatementType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "223 - Branch data1 count of: <xs:complexType name=\"AuthnStatementType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthnStatementType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthnStatementType2);
+
+        function drawChartxscomplexTypenameAuthnStatementType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthnStatementType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "224 - Branch gh-pages count of: <xs:complexType name=\"AuthnStatementType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthnStatementType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthnStatementType3);
+
+        function drawChartxscomplexTypenameAuthnStatementType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthnStatementType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "225 - Branch master count of: <xs:complexType name=\"AuthnStatementType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthnStatementType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthzDecisionQueryType1);
+
+        function drawChartxscomplexTypenameAuthzDecisionQueryType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthzDecisionQueryType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "226 - Branch data1 count of: <xs:complexType name=\"AuthzDecisionQueryType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthzDecisionQueryType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthzDecisionQueryType2);
+
+        function drawChartxscomplexTypenameAuthzDecisionQueryType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthzDecisionQueryType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "227 - Branch gh-pages count of: <xs:complexType name=\"AuthzDecisionQueryType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthzDecisionQueryType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthzDecisionQueryType3);
+
+        function drawChartxscomplexTypenameAuthzDecisionQueryType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthzDecisionQueryType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "228 - Branch master count of: <xs:complexType name=\"AuthzDecisionQueryType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthzDecisionQueryType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthzDecisionStatementType1);
+
+        function drawChartxscomplexTypenameAuthzDecisionStatementType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthzDecisionStatementType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "229 - Branch data1 count of: <xs:complexType name=\"AuthzDecisionStatementType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthzDecisionStatementType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthzDecisionStatementType2);
+
+        function drawChartxscomplexTypenameAuthzDecisionStatementType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthzDecisionStatementType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "230 - Branch gh-pages count of: <xs:complexType name=\"AuthzDecisionStatementType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthzDecisionStatementType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameAuthzDecisionStatementType3);
+
+        function drawChartxscomplexTypenameAuthzDecisionStatementType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"AuthzDecisionStatementType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "231 - Branch master count of: <xs:complexType name=\"AuthzDecisionStatementType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameAuthzDecisionStatementType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameBaseIDAbstractType1);
+
+        function drawChartxscomplexTypenameBaseIDAbstractType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"BaseIDAbstractType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "232 - Branch data1 count of: <xs:complexType name=\"BaseIDAbstractType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameBaseIDAbstractType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameBaseIDAbstractType2);
+
+        function drawChartxscomplexTypenameBaseIDAbstractType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"BaseIDAbstractType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "233 - Branch gh-pages count of: <xs:complexType name=\"BaseIDAbstractType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameBaseIDAbstractType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameBaseIDAbstractType3);
+
+        function drawChartxscomplexTypenameBaseIDAbstractType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"BaseIDAbstractType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "234 - Branch master count of: <xs:complexType name=\"BaseIDAbstractType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameBaseIDAbstractType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameCanonicalizationMethodType1);
+
+        function drawChartxscomplexTypenameCanonicalizationMethodType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"CanonicalizationMethodType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "235 - Branch data1 count of: <xs:complexType name=\"CanonicalizationMethodType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameCanonicalizationMethodType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameCanonicalizationMethodType2);
+
+        function drawChartxscomplexTypenameCanonicalizationMethodType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"CanonicalizationMethodType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 1], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "236 - Branch gh-pages count of: <xs:complexType name=\"CanonicalizationMethodType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameCanonicalizationMethodType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameCanonicalizationMethodType3);
+
+        function drawChartxscomplexTypenameCanonicalizationMethodType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"CanonicalizationMethodType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "237 - Branch master count of: <xs:complexType name=\"CanonicalizationMethodType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameCanonicalizationMethodType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameConditionAbstractType1);
+
+        function drawChartxscomplexTypenameConditionAbstractType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ConditionAbstractType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "238 - Branch data1 count of: <xs:complexType name=\"ConditionAbstractType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameConditionAbstractType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameConditionAbstractType2);
+
+        function drawChartxscomplexTypenameConditionAbstractType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ConditionAbstractType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "239 - Branch gh-pages count of: <xs:complexType name=\"ConditionAbstractType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameConditionAbstractType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameConditionAbstractType3);
+
+        function drawChartxscomplexTypenameConditionAbstractType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ConditionAbstractType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "240 - Branch master count of: <xs:complexType name=\"ConditionAbstractType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameConditionAbstractType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameConditionsType1);
+
+        function drawChartxscomplexTypenameConditionsType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ConditionsType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "241 - Branch data1 count of: <xs:complexType name=\"ConditionsType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameConditionsType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameConditionsType2);
+
+        function drawChartxscomplexTypenameConditionsType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ConditionsType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "242 - Branch gh-pages count of: <xs:complexType name=\"ConditionsType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameConditionsType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameConditionsType3);
+
+        function drawChartxscomplexTypenameConditionsType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ConditionsType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "243 - Branch master count of: <xs:complexType name=\"ConditionsType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameConditionsType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameDSAKeyValueType1);
+
+        function drawChartxscomplexTypenameDSAKeyValueType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"DSAKeyValueType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "244 - Branch data1 count of: <xs:complexType name=\"DSAKeyValueType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameDSAKeyValueType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameDSAKeyValueType2);
+
+        function drawChartxscomplexTypenameDSAKeyValueType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"DSAKeyValueType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 1], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "245 - Branch gh-pages count of: <xs:complexType name=\"DSAKeyValueType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameDSAKeyValueType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameDSAKeyValueType3);
+
+        function drawChartxscomplexTypenameDSAKeyValueType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"DSAKeyValueType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "246 - Branch master count of: <xs:complexType name=\"DSAKeyValueType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameDSAKeyValueType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameDigestMethodType1);
+
+        function drawChartxscomplexTypenameDigestMethodType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"DigestMethodType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "247 - Branch data1 count of: <xs:complexType name=\"DigestMethodType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameDigestMethodType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameDigestMethodType2);
+
+        function drawChartxscomplexTypenameDigestMethodType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"DigestMethodType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 1], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "248 - Branch gh-pages count of: <xs:complexType name=\"DigestMethodType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameDigestMethodType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameDigestMethodType3);
+
+        function drawChartxscomplexTypenameDigestMethodType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"DigestMethodType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "249 - Branch master count of: <xs:complexType name=\"DigestMethodType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameDigestMethodType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameEncryptedElementType1);
+
+        function drawChartxscomplexTypenameEncryptedElementType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"EncryptedElementType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "250 - Branch data1 count of: <xs:complexType name=\"EncryptedElementType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameEncryptedElementType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameEncryptedElementType2);
+
+        function drawChartxscomplexTypenameEncryptedElementType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"EncryptedElementType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "251 - Branch gh-pages count of: <xs:complexType name=\"EncryptedElementType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameEncryptedElementType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameEncryptedElementType3);
+
+        function drawChartxscomplexTypenameEncryptedElementType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"EncryptedElementType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "252 - Branch master count of: <xs:complexType name=\"EncryptedElementType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameEncryptedElementType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameEvidenceType1);
+
+        function drawChartxscomplexTypenameEvidenceType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"EvidenceType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "253 - Branch data1 count of: <xs:complexType name=\"EvidenceType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameEvidenceType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameEvidenceType2);
+
+        function drawChartxscomplexTypenameEvidenceType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"EvidenceType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "254 - Branch gh-pages count of: <xs:complexType name=\"EvidenceType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameEvidenceType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameEvidenceType3);
+
+        function drawChartxscomplexTypenameEvidenceType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"EvidenceType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "255 - Branch master count of: <xs:complexType name=\"EvidenceType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameEvidenceType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameExtensionsType1);
+
+        function drawChartxscomplexTypenameExtensionsType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ExtensionsType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "256 - Branch data1 count of: <xs:complexType name=\"ExtensionsType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameExtensionsType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameExtensionsType2);
+
+        function drawChartxscomplexTypenameExtensionsType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ExtensionsType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "257 - Branch gh-pages count of: <xs:complexType name=\"ExtensionsType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameExtensionsType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameExtensionsType3);
+
+        function drawChartxscomplexTypenameExtensionsType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ExtensionsType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "258 - Branch master count of: <xs:complexType name=\"ExtensionsType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameExtensionsType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameIDPEntryType1);
+
+        function drawChartxscomplexTypenameIDPEntryType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"IDPEntryType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "259 - Branch data1 count of: <xs:complexType name=\"IDPEntryType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameIDPEntryType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameIDPEntryType2);
+
+        function drawChartxscomplexTypenameIDPEntryType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"IDPEntryType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "260 - Branch gh-pages count of: <xs:complexType name=\"IDPEntryType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameIDPEntryType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameIDPEntryType3);
+
+        function drawChartxscomplexTypenameIDPEntryType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"IDPEntryType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "261 - Branch master count of: <xs:complexType name=\"IDPEntryType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameIDPEntryType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameIDPListType1);
+
+        function drawChartxscomplexTypenameIDPListType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"IDPListType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "262 - Branch data1 count of: <xs:complexType name=\"IDPListType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameIDPListType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameIDPListType2);
+
+        function drawChartxscomplexTypenameIDPListType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"IDPListType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "263 - Branch gh-pages count of: <xs:complexType name=\"IDPListType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameIDPListType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameIDPListType3);
+
+        function drawChartxscomplexTypenameIDPListType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"IDPListType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "264 - Branch master count of: <xs:complexType name=\"IDPListType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameIDPListType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameKeyInfoConfirmationDataType1);
+
+        function drawChartxscomplexTypenameKeyInfoConfirmationDataType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"KeyInfoConfirmationDataType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "265 - Branch data1 count of: <xs:complexType name=\"KeyInfoConfirmationDataType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameKeyInfoConfirmationDataType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameKeyInfoConfirmationDataType2);
+
+        function drawChartxscomplexTypenameKeyInfoConfirmationDataType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"KeyInfoConfirmationDataType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "266 - Branch gh-pages count of: <xs:complexType name=\"KeyInfoConfirmationDataType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameKeyInfoConfirmationDataType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameKeyInfoConfirmationDataType3);
+
+        function drawChartxscomplexTypenameKeyInfoConfirmationDataType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"KeyInfoConfirmationDataType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "267 - Branch master count of: <xs:complexType name=\"KeyInfoConfirmationDataType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameKeyInfoConfirmationDataType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameKeyInfoType1);
+
+        function drawChartxscomplexTypenameKeyInfoType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"KeyInfoType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "268 - Branch data1 count of: <xs:complexType name=\"KeyInfoType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameKeyInfoType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameKeyInfoType2);
+
+        function drawChartxscomplexTypenameKeyInfoType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"KeyInfoType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 1], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "269 - Branch gh-pages count of: <xs:complexType name=\"KeyInfoType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameKeyInfoType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameKeyInfoType3);
+
+        function drawChartxscomplexTypenameKeyInfoType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"KeyInfoType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "270 - Branch master count of: <xs:complexType name=\"KeyInfoType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameKeyInfoType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameKeyValueType1);
+
+        function drawChartxscomplexTypenameKeyValueType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"KeyValueType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "271 - Branch data1 count of: <xs:complexType name=\"KeyValueType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameKeyValueType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameKeyValueType2);
+
+        function drawChartxscomplexTypenameKeyValueType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"KeyValueType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 1], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "272 - Branch gh-pages count of: <xs:complexType name=\"KeyValueType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameKeyValueType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameKeyValueType3);
+
+        function drawChartxscomplexTypenameKeyValueType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"KeyValueType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "273 - Branch master count of: <xs:complexType name=\"KeyValueType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameKeyValueType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameLogoutRequestType1);
+
+        function drawChartxscomplexTypenameLogoutRequestType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"LogoutRequestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "274 - Branch data1 count of: <xs:complexType name=\"LogoutRequestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameLogoutRequestType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameLogoutRequestType2);
+
+        function drawChartxscomplexTypenameLogoutRequestType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"LogoutRequestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "275 - Branch gh-pages count of: <xs:complexType name=\"LogoutRequestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameLogoutRequestType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameLogoutRequestType3);
+
+        function drawChartxscomplexTypenameLogoutRequestType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"LogoutRequestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "276 - Branch master count of: <xs:complexType name=\"LogoutRequestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameLogoutRequestType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameManageNameIDRequestType1);
+
+        function drawChartxscomplexTypenameManageNameIDRequestType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ManageNameIDRequestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "277 - Branch data1 count of: <xs:complexType name=\"ManageNameIDRequestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameManageNameIDRequestType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameManageNameIDRequestType2);
+
+        function drawChartxscomplexTypenameManageNameIDRequestType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ManageNameIDRequestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "278 - Branch gh-pages count of: <xs:complexType name=\"ManageNameIDRequestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameManageNameIDRequestType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameManageNameIDRequestType3);
+
+        function drawChartxscomplexTypenameManageNameIDRequestType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ManageNameIDRequestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "279 - Branch master count of: <xs:complexType name=\"ManageNameIDRequestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameManageNameIDRequestType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameManifestType1);
+
+        function drawChartxscomplexTypenameManifestType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ManifestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "280 - Branch data1 count of: <xs:complexType name=\"ManifestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameManifestType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameManifestType2);
+
+        function drawChartxscomplexTypenameManifestType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ManifestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 1], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "281 - Branch gh-pages count of: <xs:complexType name=\"ManifestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameManifestType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameManifestType3);
+
+        function drawChartxscomplexTypenameManifestType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ManifestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "282 - Branch master count of: <xs:complexType name=\"ManifestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameManifestType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameNameIDMappingRequestType1);
+
+        function drawChartxscomplexTypenameNameIDMappingRequestType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"NameIDMappingRequestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "283 - Branch data1 count of: <xs:complexType name=\"NameIDMappingRequestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameNameIDMappingRequestType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameNameIDMappingRequestType2);
+
+        function drawChartxscomplexTypenameNameIDMappingRequestType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"NameIDMappingRequestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "284 - Branch gh-pages count of: <xs:complexType name=\"NameIDMappingRequestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameNameIDMappingRequestType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameNameIDMappingRequestType3);
+
+        function drawChartxscomplexTypenameNameIDMappingRequestType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"NameIDMappingRequestType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "285 - Branch master count of: <xs:complexType name=\"NameIDMappingRequestType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameNameIDMappingRequestType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameNameIDMappingResponseType1);
+
+        function drawChartxscomplexTypenameNameIDMappingResponseType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"NameIDMappingResponseType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "286 - Branch data1 count of: <xs:complexType name=\"NameIDMappingResponseType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameNameIDMappingResponseType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameNameIDMappingResponseType2);
+
+        function drawChartxscomplexTypenameNameIDMappingResponseType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"NameIDMappingResponseType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "287 - Branch gh-pages count of: <xs:complexType name=\"NameIDMappingResponseType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameNameIDMappingResponseType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameNameIDMappingResponseType3);
+
+        function drawChartxscomplexTypenameNameIDMappingResponseType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"NameIDMappingResponseType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "288 - Branch master count of: <xs:complexType name=\"NameIDMappingResponseType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameNameIDMappingResponseType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameNameIDPolicyType1);
+
+        function drawChartxscomplexTypenameNameIDPolicyType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"NameIDPolicyType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "289 - Branch data1 count of: <xs:complexType name=\"NameIDPolicyType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameNameIDPolicyType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameNameIDPolicyType2);
+
+        function drawChartxscomplexTypenameNameIDPolicyType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"NameIDPolicyType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 1], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "290 - Branch gh-pages count of: <xs:complexType name=\"NameIDPolicyType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameNameIDPolicyType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameNameIDPolicyType3);
+
+        function drawChartxscomplexTypenameNameIDPolicyType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"NameIDPolicyType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "291 - Branch master count of: <xs:complexType name=\"NameIDPolicyType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameNameIDPolicyType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameNameIDType1);
+
+        function drawChartxscomplexTypenameNameIDType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"NameIDType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "292 - Branch data1 count of: <xs:complexType name=\"NameIDType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameNameIDType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameNameIDType2);
+
+        function drawChartxscomplexTypenameNameIDType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"NameIDType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "293 - Branch gh-pages count of: <xs:complexType name=\"NameIDType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameNameIDType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameNameIDType3);
+
+        function drawChartxscomplexTypenameNameIDType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"NameIDType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "294 - Branch master count of: <xs:complexType name=\"NameIDType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameNameIDType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameObjectType1);
+
+        function drawChartxscomplexTypenameObjectType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ObjectType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 1], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "295 - Branch data1 count of: <xs:complexType name=\"ObjectType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameObjectType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameObjectType2);
+
+        function drawChartxscomplexTypenameObjectType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ObjectType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 1], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "296 - Branch gh-pages count of: <xs:complexType name=\"ObjectType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameObjectType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameObjectType3);
+
+        function drawChartxscomplexTypenameObjectType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"ObjectType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "297 - Branch master count of: <xs:complexType name=\"ObjectType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameObjectType3"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameOneTimeUseType1);
+
+        function drawChartxscomplexTypenameOneTimeUseType1() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"OneTimeUseType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["xmldsig_schema.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "298 - Branch data1 count of: <xs:complexType name=\"OneTimeUseType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameOneTimeUseType1"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameOneTimeUseType2);
+
+        function drawChartxscomplexTypenameOneTimeUseType2() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"OneTimeUseType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["xmldsig_schema.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["saml20protocol_schema.xsd", 0], ["xenc_schema.xsd", 0], ["note2.xsd", 0], ["saml20assertion_schema.xsd", 1]]);
+          // Set chart options
+          var options = {"title": "299 - Branch gh-pages count of: <xs:complexType name=\"OneTimeUseType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameOneTimeUseType2"));
+          chart.draw(data, options);
+        }
+        google.charts.setOnLoadCallback(drawChartxscomplexTypenameOneTimeUseType3);
+
+        function drawChartxscomplexTypenameOneTimeUseType3() {
+          // Create the data table.
+          var data = new google.visualization.DataTable();
+          data.addColumn("string", "<xs:complexType name=\"OneTimeUseType\"");
+          data.addColumn("number", "Values");
+          data.addRows([["bar.xsd", 0], ["foo.xsd", 0], ["dinner-menu.xsd", 0], ["bookstore.xsd", 0], ["note.xsd", 0], ["note2.xsd", 0]]);
+          // Set chart options
+          var options = {"title": "300 - Branch master count of: <xs:complexType name=\"OneTimeUseType\" grouped by file",
+                         is3D: true,
+                         "width": 400,
+                         "height": 330,
+                         "titleTextStyle": {"color": "black"}};
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.PieChart(document.getElementById("chart_div_xscomplexTypenameOneTimeUseType3"));
+          chart.draw(data, options);
+        }
+
+      $(document).ready(function () {
+         "use strict";
+         var last = $(location).attr("href").split("/").pop().split(".")[0].replace(/index/, "");
+         var tab = 1;
+         if (last !== "") {
+           tab = parseInt(last) + 1;
+         }
+         $(".navbar-nav li:nth-child(" + tab + ")").addClass("selected");
+         tab--;
+         if (tab === 0) {
+           tab = "";
+         }
+         $(".nuchecker a").attr("href", "https://validator.w3.org/nu/?doc=http%3A%2F%2Fthebeast.me%2Fxml-schema-diff%2Findex" + tab + ".html");
+      });
+    </script>
+  </body>
+</html>
