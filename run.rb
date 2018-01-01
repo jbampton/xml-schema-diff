@@ -14,10 +14,9 @@ repo = Rugged::Repository.new('.')
 branches = repo.branches.each_name(:local).sort
 
 tokens = []
-branches.each.with_index do |branch, i|
+branches.each.with_index do |branch|
   `git checkout "#{branch}" &> /dev/null`
   Dir.glob('schema/*.xsd').map do |schema|
-    filename = schema.split('/').last
     data = read_schema(schema)
     data.scan(/<xs:\w+|\w+="\w+"|\w+="xs:\w+"/).uniq do |x|
       tokens << x unless tokens.include? x
@@ -59,7 +58,8 @@ def escape(s)
 end
 
 # common function for each chart
-def draw_chart(which_chart, data, chart_string, chart_values, chart_title, chart_div, width, height)
+def draw_chart(which_chart, data, chart_string, chart_values,
+               chart_title, chart_div, width, height)
   %(
         function drawChart#{which_chart}() {
           // Create the data table.
@@ -104,10 +104,6 @@ end
 # chart size variables
 width = 400
 height = 330
-
-# data variable
-#structure = generate_data
-
 # start common page region
 $page = %(<!DOCTYPE html>
 <html lang="en">
@@ -115,7 +111,8 @@ $page = %(<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- The above 3 meta tags *must* come first in the head;
+         any other head content must come *after* these tags -->
     <title>XML Schema Differencing Dashboard</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -204,7 +201,7 @@ $page = add_links(page_count)
 page_build(page_count)
 # restart common page region
 $page = %(
-            <li class="nuchecker"><a target="_blank" rel="noopener">Valid HTML</a>
+            <li class="nuchecker"><a target="_blank" rel="noopener">Valid HTML</a></li>
         </ul>
         <a href="https://info.flagcounter.com/LJf1" target="_blank" rel="noopener">
           <img src="https://s04.flagcounter.com/countxl/LJf1/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_250/viewers_0/labels_1/pageviews_0/flags_1/percent_0/" alt="Free counters!">
@@ -232,7 +229,7 @@ structure.map.with_index do |token, ind|
     v = 'Values'
     i = ind / 50
     instance_variable_set("@page#{i > 0 ? i : ''}",
-                          instance_variable_get("@page#{i > 0 ? i : ''}") + "        google.charts.setOnLoadCallback(drawChart#{data0});\n" + draw_chart(data0, data1, chart[0], v, chart_title(chart[0], ind * 3 + j, branches[j-1]), data0, width, height))
+                          instance_variable_get("@page#{i > 0 ? i : ''}") + "        google.charts.setOnLoadCallback(drawChart#{data0});\n" + draw_chart(data0, data1, chart[0], v, chart_title(chart[0], ind * 3 + j, branches[j - 1]), data0, width, height))
   end
 end
 
