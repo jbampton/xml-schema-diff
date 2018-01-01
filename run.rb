@@ -14,7 +14,7 @@ repo = Rugged::Repository.new('.')
 branches = repo.branches.each_name(:local).sort
 
 tokens = []
-branches.each.with_index do |branch|
+branches.each do |branch|
   `git checkout "#{branch}" &> /dev/null`
   Dir.glob('schema/*.xsd').map do |schema|
     data = read_schema(schema)
