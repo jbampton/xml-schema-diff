@@ -135,7 +135,7 @@ $page = %(<!DOCTYPE html>
   </head>
   <body>
     <!-- Static navbar -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" id="head1">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed"
@@ -146,7 +146,7 @@ $page = %(<!DOCTYPE html>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html" id="head1">
+          <a class="navbar-brand" href="index.html">
             XML Schema Differencing Dashboard
           </a>
         </div>
