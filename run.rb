@@ -44,8 +44,6 @@ tokens.map.with_index do |token, i|
 end
 # jump back to gh-pages default branch
 `git checkout gh-pages &> /dev/null`
-#
-# puts structure
 
 # common function that prints the chart title
 def chart_title(chart_type, ind, branch)
@@ -138,18 +136,22 @@ $page = %(<!DOCTYPE html>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle collapsed"
+                  data-toggle="collapse" data-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html" id="head1">XML Schema Differencing Dashboard</a>
+          <a class="navbar-brand" href="index.html" id="head1">
+            XML Schema Differencing Dashboard
+          </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">)
 
-# try 50 charts per page
+# try 50 chart sections per page
 page_count = structure.size / 50
 (0..page_count).map do |i|
   instance_variable_set("@page#{i > 0 ? i : ''}", $page)
@@ -202,10 +204,14 @@ $page = add_links(page_count)
 page_build(page_count)
 # restart common page region
 $page = %(
-            <li class="nuchecker"><a target="_blank" rel="noopener">Valid HTML</a></li>
+            <li class="nuchecker">
+              <a target="_blank" rel="noopener">Valid HTML</a>
+            </li>
         </ul>
-        <a href="https://info.flagcounter.com/LJf1" target="_blank" rel="noopener">
-          <img src="https://s04.flagcounter.com/countxl/LJf1/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_250/viewers_0/labels_1/pageviews_0/flags_1/percent_0/" alt="Free counters!">
+        <a href="https://info.flagcounter.com/LJf1"
+           target="_blank" rel="noopener">
+          <img src="https://s04.flagcounter.com/countxl/LJf1/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_250/viewers_0/labels_1/pageviews_0/flags_1/percent_0/"
+               alt="Free counters!">
         </a>
       </div>
     </footer>
@@ -238,12 +244,12 @@ schema_colors = { 'bar.xsd' => '#E6B0AA',
                   'xenc_schema.xsd' => '#17202A',
                   'xmldsig_schema.xsd' => '#8E44AD' }
 
-# add all the javascript for each pie chart to each page
+# add all the JavaScript for each pie chart to each page
 structure.map.with_index do |token, ind|
   token.map.with_index(1) do |chart, j|
     data0 = clean_chart(chart[0]) + j.to_s
     data1 = chart[1..-1]
-    colors = data1.map{|d| schema_colors[d[0]]}
+    colors = data1.map { |d| schema_colors[d[0]] }
     v = 'Values'
     i = ind / 50
     instance_variable_set("@page#{i > 0 ? i : ''}",
