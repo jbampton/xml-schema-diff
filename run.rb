@@ -130,6 +130,7 @@ $page = %(<!DOCTYPE html>
       .navbar-default li:hover a { background-color: red !important; }
       .nuchecker a { font-weight: bold; }
       h2 { text-align: center; background-color: rgba(49,37,152,0.8); padding: 14px; color: #fff; }
+      .navarrows { clear: both; padding-left: 30pt; }
     </style>
   </head>
   <body>
@@ -187,6 +188,10 @@ structure.map.with_index do |token, i|
   end
   instance_variable_set("@page#{i > 0 ? i : ''}",
                         instance_variable_get("@page#{i > 0 ? i : ''}") + '
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>')
 end
 
@@ -214,6 +219,7 @@ $page = %(
           <img src="https://s04.flagcounter.com/countxl/LJf1/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_250/viewers_0/labels_1/pageviews_0/flags_1/percent_0/"
                alt="Free counters!">
         </a>
+        <a id="theend"></a>
       </div>
     </footer>
     <!--Load the AJAX API-->
