@@ -68,6 +68,7 @@ def draw_chart(which_chart, data, chart_string, chart_values,
           // Set chart options
           var options = {"title": "#{escape(chart_title)}",
                          is3D: true,
+                         "pieSliceText": "value",
                          colors: #{colors},
                          "width": #{width},
                          "height": #{height},
