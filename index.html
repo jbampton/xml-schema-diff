@@ -23,11 +23,12 @@
       .navbar-default li:hover a { background-color: red !important; }
       .nuchecker a { font-weight: bold; }
       h2 { text-align: center; background-color: rgba(49,37,152,0.8); padding: 14px; color: #fff; }
+      .navarrows { clear: both; padding-left: 30pt; }
     </style>
   </head>
   <body>
     <!-- Static navbar -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" id="head1">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed"
@@ -38,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html" id="head1">
+          <a class="navbar-brand" href="index.html">
             XML Schema Differencing Dashboard
           </a>
         </div>
@@ -68,300 +69,500 @@
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsannotation1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsannotation2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsannotation3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>2. Branch count of schema by xs:any</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsany1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsany2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsany3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>3. Branch count of schema by xs:any processContents="lax"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsanyprocessContentslax1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsanyprocessContentslax2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsanyprocessContentslax3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>4. Branch count of schema by xs:anyAttribute</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsanyAttribute1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsanyAttribute2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsanyAttribute3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>5. Branch count of schema by xs:appinfo</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsappinfo1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsappinfo2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsappinfo3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>6. Branch count of schema by xs:attribute</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattribute1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattribute2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattribute3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>7. Branch count of schema by xs:attribute name="Address"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAddress1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAddress2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAddress3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>8. Branch count of schema by xs:attribute name="Algorithm"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAlgorithm1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAlgorithm2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAlgorithm3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>9. Branch count of schema by xs:attribute name="AllowCreate"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAllowCreate1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAllowCreate2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAllowCreate3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>10. Branch count of schema by xs:attribute name="AssertionConsumerServiceIndex"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAssertionConsumerServiceIndex1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAssertionConsumerServiceIndex2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAssertionConsumerServiceIndex3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>11. Branch count of schema by xs:attribute name="AssertionConsumerServiceURL"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAssertionConsumerServiceURL1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAssertionConsumerServiceURL2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAssertionConsumerServiceURL3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>12. Branch count of schema by xs:attribute name="AttributeConsumingServiceIndex"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAttributeConsumingServiceIndex1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAttributeConsumingServiceIndex2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAttributeConsumingServiceIndex3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>13. Branch count of schema by xs:attribute name="AuthnInstant"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAuthnInstant1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAuthnInstant2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameAuthnInstant3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>14. Branch count of schema by xs:attribute name="Comparison"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameComparison1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameComparison2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameComparison3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>15. Branch count of schema by xs:attribute name="Consent"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameConsent1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameConsent2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameConsent3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>16. Branch count of schema by xs:attribute name="Count"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameCount1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameCount2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameCount3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>17. Branch count of schema by xs:attribute name="DNSName"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameDNSName1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameDNSName2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameDNSName3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>18. Branch count of schema by xs:attribute name="Decision"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameDecision1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameDecision2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameDecision3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>19. Branch count of schema by xs:attribute name="Destination"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameDestination1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameDestination2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameDestination3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>20. Branch count of schema by xs:attribute name="Encoding"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameEncoding1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameEncoding2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameEncoding3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>21. Branch count of schema by xs:attribute name="ForceAuthn"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameForceAuthn1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameForceAuthn2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameForceAuthn3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>22. Branch count of schema by xs:attribute name="Format"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameFormat1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameFormat2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameFormat3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>23. Branch count of schema by xs:attribute name="FriendlyName"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameFriendlyName1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameFriendlyName2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameFriendlyName3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>24. Branch count of schema by xs:attribute name="ID"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameID1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameID2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameID3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>25. Branch count of schema by xs:attribute name="Id"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameId1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameId2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameId3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>26. Branch count of schema by xs:attribute name="InResponseTo"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameInResponseTo1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameInResponseTo2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameInResponseTo3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>27. Branch count of schema by xs:attribute name="IsPassive"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameIsPassive1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameIsPassive2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameIsPassive3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>28. Branch count of schema by xs:attribute name="IssueInstant"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameIssueInstant1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameIssueInstant2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameIssueInstant3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>29. Branch count of schema by xs:attribute name="Loc"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameLoc1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameLoc2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameLoc3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>30. Branch count of schema by xs:attribute name="Method"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameMethod1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameMethod2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameMethod3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>31. Branch count of schema by xs:attribute name="MimeType"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameMimeType1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameMimeType2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameMimeType3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>32. Branch count of schema by xs:attribute name="Name"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameName1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameName2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameName3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>33. Branch count of schema by xs:attribute name="NameFormat"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameNameFormat1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameNameFormat2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameNameFormat3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>34. Branch count of schema by xs:attribute name="NameQualifier"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameNameQualifier1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameNameQualifier2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameNameQualifier3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>35. Branch count of schema by xs:attribute name="Namespace"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameNamespace1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameNamespace2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameNamespace3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>36. Branch count of schema by xs:attribute name="NotBefore"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameNotBefore1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameNotBefore2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameNotBefore3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>37. Branch count of schema by xs:attribute name="NotOnOrAfter"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameNotOnOrAfter1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameNotOnOrAfter2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameNotOnOrAfter3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>38. Branch count of schema by xs:attribute name="ProtocolBinding"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameProtocolBinding1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameProtocolBinding2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameProtocolBinding3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>39. Branch count of schema by xs:attribute name="ProviderID"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameProviderID1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameProviderID2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameProviderID3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>40. Branch count of schema by xs:attribute name="ProviderName"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameProviderName1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameProviderName2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameProviderName3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>41. Branch count of schema by xs:attribute name="ProxyCount"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameProxyCount1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameProxyCount2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameProxyCount3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>42. Branch count of schema by xs:attribute name="Reason"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameReason1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameReason2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameReason3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>43. Branch count of schema by xs:attribute name="Recipient"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameRecipient1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameRecipient2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameRecipient3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>44. Branch count of schema by xs:attribute name="Resource"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameResource1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameResource2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameResource3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>45. Branch count of schema by xs:attribute name="SPNameQualifier"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameSPNameQualifier1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameSPNameQualifier2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameSPNameQualifier3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>46. Branch count of schema by xs:attribute name="SPProvidedID"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameSPProvidedID1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameSPProvidedID2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameSPProvidedID3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>47. Branch count of schema by xs:attribute name="SessionIndex"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameSessionIndex1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameSessionIndex2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameSessionIndex3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>48. Branch count of schema by xs:attribute name="SessionNotOnOrAfter"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameSessionNotOnOrAfter1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameSessionNotOnOrAfter2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameSessionNotOnOrAfter3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>49. Branch count of schema by xs:attribute name="Target"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameTarget1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameTarget2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameTarget3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
       <h2>50. Branch count of schema by xs:attribute name="Type"</h2>
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameType1"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameType2"></div>
           <div class="col-sm-6 col-md-4 col-lg-3" id="chart_div_xsattributenameType3"></div>
+          <div class="navarrows">
+            <a href="#head1">&#8593;</a>
+            <a href="#theend">&#8595;</a>
+          </div>
         </div>
     </div>
     <footer>
@@ -391,6 +592,7 @@
           <img src="https://s04.flagcounter.com/countxl/LJf1/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_250/viewers_0/labels_1/pageviews_0/flags_1/percent_0/"
                alt="Free counters!">
         </a>
+        <a id="theend"></a>
       </div>
     </footer>
     <!--Load the AJAX API-->
