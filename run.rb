@@ -224,9 +224,9 @@ page_build(page_count)
 
 # colors for the pie chart pieces
 schema_colors = { 'bar.xsd' => '#E6B0AA',
-                  'bookstore.xsd' => '#641E16',
+                  'bookstore.xsd' => '#F4D03F',
                   'concept.xsd' => '#D7BDE2',
-                  'dinner-menu.xsd' => '#512E5F',
+                  'dinner-menu.xsd' => '#28B463',
                   'foo.xsd' => '#A9CCE3',
                   'note.xsd' => '#154360',
                   'note2.xsd' => '#A3E4D7',
