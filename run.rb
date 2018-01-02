@@ -59,7 +59,7 @@ end
 
 # common function for each chart
 def draw_chart(which_chart, data, chart_string, chart_values,
-               chart_title, chart_div, width, height)
+               chart_title, chart_div, width, height, colors)
   %(
         function drawChart#{which_chart}() {
           // Create the data table.
@@ -70,6 +70,7 @@ def draw_chart(which_chart, data, chart_string, chart_values,
           // Set chart options
           var options = {"title": "#{escape(chart_title)}",
                          is3D: true,
+                         colors: #{colors},
                          "width": #{width},
                          "height": #{height},
                          "titleTextStyle": {"color": "black"}};
@@ -221,15 +222,32 @@ $page = %(
 # continue to build all the pages
 page_build(page_count)
 
+# colors for the pie chart pieces
+schema_colors = { 'bar.xsd' => '#E6B0AA',
+                  'bookstore.xsd' => '#641E16',
+                  'concept.xsd' => '#D7BDE2',
+                  'dinner-menu.xsd' => '#512E5F',
+                  'foo.xsd' => '#A9CCE3',
+                  'note.xsd' => '#154360',
+                  'note2.xsd' => '#A3E4D7',
+                  'reference.xsd' => '#0E6251',
+                  'saml20assertion_schema.xsd' => '#F9E79F',
+                  'saml20protocol_schema.xsd' => '#E67E22',
+                  'task.xsd' => '#784212',
+                  'topic.xsd' => '#34495E',
+                  'xenc_schema.xsd' => '#17202A',
+                  'xmldsig_schema.xsd' => '#8E44AD' }
+
 # add all the javascript for each pie chart to each page
 structure.map.with_index do |token, ind|
   token.map.with_index(1) do |chart, j|
     data0 = clean_chart(chart[0]) + j.to_s
     data1 = chart[1..-1]
+    colors = data1.map{|d| schema_colors[d[0]]}
     v = 'Values'
     i = ind / 50
     instance_variable_set("@page#{i > 0 ? i : ''}",
-                          instance_variable_get("@page#{i > 0 ? i : ''}") + "        google.charts.setOnLoadCallback(drawChart#{data0});\n" + draw_chart(data0, data1, chart[0], v, chart_title(chart[0], ind * 3 + j, branches[j - 1]), data0, width, height))
+                          instance_variable_get("@page#{i > 0 ? i : ''}") + "        google.charts.setOnLoadCallback(drawChart#{data0});\n" + draw_chart(data0, data1, chart[0], v, chart_title(chart[0], ind * 3 + j, branches[j - 1]), data0, width, height, colors))
   end
 end
 
