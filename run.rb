@@ -202,17 +202,29 @@ $page = '
       <div class="container">
         <ul class="list-unstyled">
           <li>
+            <a class="github-button" href="https://github.com/jbampton"
+               data-size="large" data-show-count="true"
+               aria-label="Follow @jbampton on GitHub">Follow @jbampton</a>
+          </li>
+          <li>
             <a class="github-button"
                href="https://github.com/jbampton/xml-schema-diff"
                data-icon="octicon-star" data-size="large" data-show-count="true"
                aria-label="Star jbampton/xml-schema-diff on GitHub">Star</a>
           </li>
           <li>
-            <a class="github-button" href="https://github.com/jbampton"
-               data-size="large" data-show-count="true"
-               aria-label="Follow @jbampton on GitHub">Follow @jbampton</a>
+            <a class="github-button"
+               href="https://github.com/jbampton/xml-schema-diff/subscription"
+               data-icon="octicon-eye" data-size="large" data-show-count="true"
+               aria-label="Watch jbampton/xml-schema-diff on GitHub">Watch</a>
+          </li>
+          <li>
+            <a class="github-button"
+               href="https://github.com/jbampton/xml-schema-diff/fork"
+               data-icon="octicon-repo-forked" data-size="large"
+               data-show-count="true"
+               aria-label="Fork jbampton/xml-schema-diff on GitHub">Fork</a>
           </li>'
-
 # continue to build all the pages
 page_build(page_count)
 # restart common page region
