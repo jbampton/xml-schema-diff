@@ -260,20 +260,20 @@ $page = %(
 page_build(page_count)
 
 # colors for the pie chart pieces
-schema_colors = { 'bar.xsd' => '#E6B0AA',
-                  'bookstore.xsd' => '#F4D03F',
-                  'concept.xsd' => '#D7BDE2',
-                  'dinner-menu.xsd' => '#28B463',
-                  'foo.xsd' => '#A9CCE3',
-                  'note.xsd' => '#154360',
-                  'note2.xsd' => '#A3E4D7',
-                  'reference.xsd' => '#78281F',
-                  'saml20assertion_schema.xsd' => '#7D6608',
-                  'saml20protocol_schema.xsd' => '#E67E22',
-                  'task.xsd' => '#784212',
-                  'topic.xsd' => '#34495E',
-                  'xenc_schema.xsd' => '#17202A',
-                  'xmldsig_schema.xsd' => '#8E44AD' }
+schema_colors = { 'bar' => '#E6B0AA',
+                  'bookstore' => '#F4D03F',
+                  'concept' => '#D7BDE2',
+                  'dinner-menu' => '#28B463',
+                  'foo' => '#A9CCE3',
+                  'note' => '#154360',
+                  'note2' => '#A3E4D7',
+                  'reference' => '#78281F',
+                  'saml20assertion_schema' => '#7D6608',
+                  'saml20protocol_schema' => '#E67E22',
+                  'task' => '#784212',
+                  'topic' => '#34495E',
+                  'xenc_schema' => '#17202A',
+                  'xmldsig_schema' => '#8E44AD' }
 
 # add all the JavaScript for each pie chart to each page
 structure.map.with_index do |token, ind|
