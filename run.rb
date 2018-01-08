@@ -38,7 +38,7 @@ tokens.map.with_index do |token, i|
     Dir.glob('schema/*.xsd').map do |schema|
       filename = schema.split('/').last
       data = read_schema(schema)
-      structure[i][j] << [filename, data.scan(token).size]
+      structure[i][j] << [filename.split('.').first, data.scan(token).size]
     end
   end
 end
